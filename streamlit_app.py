@@ -150,6 +150,9 @@ def exibir_produto(produto: Dict):
             # Descrição (se tiver)
             if produto.get('descricao'):
                 st.caption(produto.get('descricao'))
+
+            if produto.get('ranking'):
+                st.caption('Ranking: ' + produto.get('ranking'))
             
             # Fonte e Link
             fonte = produto.get('fonte', 'Fonte não informada')

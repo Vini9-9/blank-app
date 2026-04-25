@@ -1,40 +1,274 @@
 {
   "produtos": [
     {
-      "nome": "Smartphone XYZ Pro",
-      "categoria": "Eletrônicos",
-      "imagem": "https://placehold.co/400x300/1976d2/white?text=Smartphone",
-      "menor_preco": 1299.90,
-      "fonte": "TechStore",
-      "link": "https://www.amazon.com.br/dp/exemplo1",
-      "descricao": "Smartphone com 128GB, 6GB RAM e câmera de 50MP"
+      "nome": "Umbro pro 5 stable",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSqDkdUl_H_DHcGXxvLX26NIe5EFUqtPyMrjSvanbJN85g7JDM",
+      "menor_preco": 759.99,
+      "fonte": "Decathlon",
+      "link": "https://www.decathlon.com.br/chuteira-futsal-umbro-pro-5-stable-2145861993/p?idsku=977949&srsltid=AfmBOopwAnZeKY8rmI2QnC8RhlqAikn1MbIlRKTRLSMbBjbgCrNfmy7nRH0",
+      "descricao": "Chuteira de futsal Umbro pro 5 stable",
+      "ranking": "1º em 2025"
     },
     {
-      "nome": "Fone de Ouvido Bluetooth",
-      "categoria": "Eletrônicos",
-      "imagem": "https://placehold.co/400x300/42a5f5/white?text=Fone",
-      "menor_preco": 199.90,
-      "fonte": "SoundShop",
-      "link": "https://www.mercadolivre.com.br/exemplo2",
-      "descricao": "Cancelamento de ruído e 20h de bateria"
+      "nome": "Mizuno Morelia Sala Pro",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT4y0i7wLCYYTCayb8AAwcMMpxQXAaQKHR3F3J4mbMMOuk0rqM5jQFMaMfV-KRWfIAC_tz_Iki_-loBr6uHXW7qtteMkn3aBnPPZv-XQ5jLOVu3twLpIMqBEw",
+      "menor_preco": 539.99,
+      "fonte": "Netshoes",
+      "link": "https://www.netshoes.com.br/pdp/2FV-1350-843?campaign=gglepqpla&selected=2FV-1350-843-39&sellerId=15401",
+      "descricao": "Chuteira de futsal Mizuno Morelia Sala Pro",
+      "ranking": "1º em 2025"
     },
     {
-      "nome": "Camiseta Básica",
-      "categoria": "Moda",
-      "imagem": "https://placehold.co/400x300/66bb6a/white?text=Camiseta",
-      "menor_preco": 49.90,
-      "fonte": "ModaStyle",
-      "link": "https://www.lojasrenner.com.br/exemplo3",
-      "descricao": "Camiseta 100% algodão, cores diversas"
+      "nome": "Joma top flex rebound",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS30-7YQFdJtTW-nCWkZubNhUvcquL1O3w9dIImDBGLm4ZC-qZ94Dc9-F5G-4BZHBOXfbqWoEnuK6P86gyJFy8eJYqekfYJtcxVRFYVxlEeKohWuZg7c5fDaw",
+      "menor_preco": 849.99,
+      "fonte": "Bayard Esportes",
+      "link": "https://www.bayardesportes.com.br/chuteira-futsal-joma-top-flex-rebound-hexa-mundial-masculina-branca-dourada/p?skuId=76104&srsltid=AfmBOoruDRQjCA7UdI8hcGouMD8JYKJ2_ioBVsFPvigg1qDWujImXPjlMK0",
+      "descricao": "Chuteira de futsal Joma top flex rebound",
+      "ranking": "1º em 2025"
     },
     {
-      "nome": "Livro: Python Avançado",
-      "categoria": "Livros",
-      "imagem": "https://placehold.co/400x300/ff9800/white?text=Livro",
-      "menor_preco": 89.90,
-      "fonte": "BookStore",
-      "link": "https://www.amazon.com.br/dp/exemplo4",
-      "descricao": "Guia completo de Python para desenvolvedores"
+      "nome": "Umbro pro 5",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSytnhwYQcQDeE4nFk-lAVyad7iIE97tjHpkIuRHu9XN5XfYZ6n",
+      "menor_preco": 379.9,
+      "fonte": "Amazon.com.br - Seller",
+      "link": "https://www.amazon.com.br/Chuteira-Futsal-Umbro-Preto-Roxo-Num%C3%A9rico/dp/B0GP2MMCQN?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A2HKNDWRM4L5KF",
+      "descricao": "Chuteira de futsal Umbro pro 5",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Joma top flex",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS30-7YQFdJtTW-nCWkZubNhUvcquL1O3w9dIImDBGLm4ZC-qZ94Dc9-F5G-4BZHBOXfbqWoEnuK6P86gyJFy8eJYqekfYJtcxVRFYVxlEeKohWuZg7c5fDaw",
+      "menor_preco": 849.99,
+      "fonte": "Bayard Esportes",
+      "link": "https://www.bayardesportes.com.br/chuteira-futsal-joma-top-flex-rebound-hexa-mundial-masculina-branca-dourada/p?skuId=76104&srsltid=AfmBOoqWsDkiL9mZ2nFoaJ6mOOITokA085tc_pb653goqPwI1aHj1w5HQYE",
+      "descricao": "Chuteira de futsal Joma top flex",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Joma top flex plus",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSI9EZ3NosoxmHV1ym2QncSjGdQDZCjrjlnjzx6tZ_K2U4mO41nupNOaJd66TsdJflK3GXFVlmEx56oZdr4smGkF73SF1haKex0W6_yEEEEhQTyaebGURmI",
+      "menor_preco": 657.99,
+      "fonte": "Amazon.com.br - Seller",
+      "link": "https://www.amazon.com.br/Chuteira-Futsal-Joma-Rebound-Natural/dp/B0G3CLFHNP?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AJPZ7SKCCN7X1",
+      "descricao": "Chuteira de futsal Joma top flex plus",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Dominator pro V",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQRQamqg7XQr2o_9c4w1w4dDiC8EUu3axbUbX4M1UKTsRY1GOAauWxtOxcCBNLhwxxzC6aAixsIJeFh3UIBY2s0Y9VuuUQOskd6H9TEsptBIeFXRJg0jXpW_A",
+      "menor_preco": 374.9,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-dominator-pro-v-unissex-preto+amarelo-D30-6556-178",
+      "descricao": "Chuteira de futsal Topper Dominator pro V",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Dominator pro 5",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTHmRDblI7lkiHdJ7MT2p4WEc886QmMetbYepJjiA9Mj3U6uEKQmucFha8EeaQLormSa0W_AI28zY7riEMsWiBoMjy_8m3h5DL9P6lxxW32BCUGwsy7J-wtOQ",
+      "menor_preco": 389.9,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/tenis-futsal-topper-dominator-pro-v-masculino-laranja+azul-D30-6995-387",
+      "descricao": "Chuteira de futsal Topper Dominator pro 5",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Munich Continental V2",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRkg4nO4eF71_Kk5bpcweOP39bUHG_4UAHB-P-MI5mm8Yqdr7bd8guWQbZfRCtk4thpt4Cm9eHVWRLMLFp_-8_j56JaoMV5Zir5KKvn2EwEi9C6Sb_XZEHWGU8",
+      "menor_preco": 437.5,
+      "fonte": "Renner",
+      "link": "https://www.lojasrenner.com.br/p/chuteira-futsal-munich-continental-v2-masculina/-/A-7010706112600-br.lr?sku=7510713178293&p=refresh&srsltid=AfmBOooQri0zwzBN61_sIZuf9BGFRGDepqU9_O1Y74iNGq9Cj7MkLQitHc8",
+      "descricao": "Chuteira de futsal Munich Continental V2",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Adamant Master Class Pro",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT_ipwJDgaC8Dr6aQOWTnI2f_dZn2pUVakmi-tszyQ96AqCSqJu40EAwSTjD91WjhdS-jDvb_CujXdjbFu868csYp0IfSTADg",
+      "menor_preco": 440.99,
+      "fonte": "netshoes.com.br",
+      "link": "https://www.netshoes.com.br/p/chuteira-futsal-umbro-adamant-master-class-pro-bump-masculina-preto+prata-2IB-2029-038",
+      "descricao": "Chuteira de futsal Adamant Master Class Pro",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Munich One",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ9TMUKIq_sJn94wTnH-JWp6DHIl-qUqgWfXEDXJe9LDK5Mt5yZkEdHrginMp0GZuhT6E9tZy0hAfQCHD9wjircqDr8hKknGBYFfjUf-5y7yf8syBNVnI2qvhWA",
+      "menor_preco": 349.99,
+      "fonte": "Munich Sports Brasil",
+      "link": "https://www.munichsports.com.br/produto/chuteira-futsal-one-preto-munich-54?srsltid=AfmBOopgkXiQNhyixJynYJIXgLuZK5cZLNWpKGdiX0pNVujwclB9PtfQXts",
+      "descricao": "Chuteira de futsal Munich One",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Joma Regate Rebound",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRBjhAxkc-LfnNklLzG4ZU6fQS3d2PKrbKrr9Mf28jNBHRamC6a",
+      "menor_preco": 409.49,
+      "fonte": "Centauro.com.br",
+      "link": "",
+      "descricao": "Chuteira de futsal Joma Regate Rebound",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Munich Gresca",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQrxjkZ4OAQgjOjLPhfeSv5-bJ6oafvPHbCCXpLywlxSrNOqwxyARcR5uKoYxLpxVvTpUEDhxuMqOWrO7tKnT4q27SRBBdauEkLTVyIRUJ5P_ytzYBbaiYScowJ",
+      "menor_preco": 649.99,
+      "fonte": "Munich Sports Brasil",
+      "link": "https://www.munichsports.com.br/produto/chuteira-futsal-gresca-2-0-branco-munich-25?srsltid=AfmBOopk2BUwxCaeQ-hnlJhrMDyfDk2R7IccPcW306HOGrg9dDbTe5FoZTI",
+      "descricao": "Chuteira de futsal Munich Gresca",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Penalty Max Evolution",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRNFhMvWJeFQndi2u5G35WHRE7YO94pFjQVC8J6bUCcX4--vn37C_pBB7rP5Yo47Gl-Ux5GISmkzUTrVq77gXjHSV_emnDNXB9LgzzYDOHuAorD6YdXYc3XIg",
+      "menor_preco": 279.9,
+      "fonte": "Dafiti",
+      "link": "https://www.dafiti.com.br/Chuteira-Penalty-Evolution-Club-Futsal-Preta-e-Laranja-14931003.html?utm_source=google&utm_medium=organic&utm_campaign=organic-shopping&utm_content=calcados&utm_term=PE924ACM96NHJ",
+      "descricao": "Chuteira de futsal Penalty Max Evolution",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Munich Continental V2",
+      "categoria": "Melhores",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRkg4nO4eF71_Kk5bpcweOP39bUHG_4UAHB-P-MI5mm8Yqdr7bd8guWQbZfRCtk4thpt4Cm9eHVWRLMLFp_-8_j56JaoMV5Zir5KKvn2EwEi9C6Sb_XZEHWGU8",
+      "menor_preco": 437.5,
+      "fonte": "Renner",
+      "link": "https://www.lojasrenner.com.br/p/chuteira-futsal-munich-continental-v2-masculina/-/A-7010706112600-br.lr?sku=7510713178293&p=refresh&srsltid=AfmBOooQri0zwzBN61_sIZuf9BGFRGDepqU9_O1Y74iNGq9Cj7MkLQitHc8",
+      "descricao": "Chuteira de futsal Munich Continental V2",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Maestro Light",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTosvIZXev8kRgnsRfhs14SZe1hlXBOuJ0aK_i_dNDdjxrGGW7O6RRbmwkT7-Sh349xE2odDiZrNDR2l5HMLzURr4NZ5T93uxH05iAoP0PJ_0IlramOaBv0",
+      "menor_preco": 180.49,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-maestro-light-unissex-coral-D30-736L-223",
+      "descricao": "Chuteira de futsal Topper Maestro Light",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Original Maestro",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQK0QvWnVbxMZzvXgWHsh4KT6_shFZPZzaJ2fPXH4JXZscpzgO_v-SQlCvyWJDHiprPfyGqSw4KCrEXX92sYqPkP7V_Aplf7KgCeMYZgam6rHCVpdWeyhUm8w",
+      "menor_preco": 142.49,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-maestro-club-v-unissex-preto+vermelho-D30-6943-002",
+      "descricao": "Chuteira de futsal Topper Original Maestro",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Umbro Challenge Uptake",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRQ0T0GhMQiX8JvHekn0R85gshmAIljMcAtHtjlfODYxOzIPlQvVmI9Rz7jjyIWrz8yG54FLyWUFj63IS6KmgdRHK56dZu2bU_Gt5cmsrILb-9LmRl0mNKgKA",
+      "menor_preco": 409.9,
+      "fonte": "netshoes.com.br",
+      "link": "",
+      "descricao": "Chuteira de futsal Umbro Challenge Uptake",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Dominator Fuse Li",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSrq168sY6nzn1btP3fpxR8jJMxlTn56dvkbhSA-pTxO4MdNyOspcl816M5BfAo02RgkHGyoDNor85uPxGSOOjLf3ijuJRX6Gytf4k-IX69rpIGDZZCuFXBog",
+      "menor_preco": 408.49,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-dominator-fuse-unissex-amarelo+fluorescente+branco-D30-6272-670",
+      "descricao": "Chuteira de futsal Topper Dominator Fuse Li",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Letra 4",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcReeaUPvQBW9HMjc6tmAd4lMoXThbhukYnCkaq8KyKZDLZIwpMemsgxyP0nhlKM80Qf5_IbTQkJyRj33IMeK1EUlVGTzFxNB45nQS98_gYOb5q7an5m0H3I",
+      "menor_preco": 311.5,
+      "fonte": "Loja Topper",
+      "link": "",
+      "descricao": "Chuteira de futsal Topper Letra 4",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Dominator Club V",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjc1M7cEogTW8auFLPKFxLLmGZ2C4Ls0uRxivLOny2P05UxPOMrw6ngBptkvJFpFFHnns6_ljpORVn-U-NQoGRmqiJoUnz0-AXS_AmU4MT0I78CRnaQ_0a",
+      "menor_preco": 232.89,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-dominator-club-v-masculina-preto+amarelo-D30-6555-178",
+      "descricao": "Chuteira de futsal Topper Dominator Club V",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Munich Rondito",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSWiCbckEgxTDGjKd4XC5G_qhSnEsFoYTDjVvmBzL-H2Qx6ibzzmkjC9xFTt0ARtr2vpAfkrm43aUiicohrgtR_ZDQIkEeEQ1L5yw1Qua2wZmwU3y7ZJ-4XCv55",
+      "menor_preco": 499.99,
+      "fonte": "Munich Sports Brasil",
+      "link": "https://www.munichsports.com.br/produto/chuteira-futsal-rondito-azul-munich-164?srsltid=AfmBOoqLqXpLVVIwzqJhFULrSdE2diHZmZ2BWUcuPz8sOd9ZcKGvFq_ulIU",
+      "descricao": "Chuteira de futsal Munich Rondito",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Joma Invicto",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQfdsWL-v0DdfMek-ASxckZTpwJwbefx35bG8pVrW8Et6nMadmF0ADFuBV1HSuyFahW7cHtzTlpWM4WwVJDUnU03FYV-tuplHxy6vlgknfP",
+      "menor_preco": 541.4,
+      "fonte": "Netshoes",
+      "link": "https://www.netshoes.com.br/pdp/049-4955-030?campaign=gglepqpla&selected=049-4955-030-37",
+      "descricao": "Chuteira de futsal Joma Invicto",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Umbro pro 5 Club",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT8lYkDJdXRbGEHwBP4rjLoCsTIUCxbPsjPxWrPQt5eh2vsBCfUouzx5Cpb71QQhSN0CUiZLdr4V756w3kOCSgefnOzBhSkVfVrX9XCFwFbqmxjH6qE_HB4",
+      "menor_preco": 323.88,
+      "fonte": "Amazon",
+      "link": "https://www.amazon.com.br/Chuteira-Masculino-Umbro-Laranja-Num%C3%A9rico/dp/B0FB68T1TB?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AWP6JTG1TMOEW",
+      "descricao": "Chuteira de futsal Umbro pro 5 Club",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Penalty Brasil 70",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTsu5cXD0O__LOGLCVgsMGcuZJy86wzpPXRw2TaPvp4X97bE1qRnCcaGBhz411kI05f-NhPz80",
+      "menor_preco": 106.49,
+      "fonte": "Amazon.com.br - Retail",
+      "link": "https://www.amazon.com.br/Penalty-Calcado-Futsal-Brasil-Y-1/dp/B0DD1T9N9D?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1ZZFT5FULY4LN",
+      "descricao": "Chuteira de futsal Penalty Brasil 70",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Topper Dominator Fuse 2",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSbijdFhn6x-zAT6CY14BPy3lAXHZf4Cm0-hHfpwalQmk5OfZ4SohJ3kHcmGTMfDxfzwEQC8iKwWksFQJWad-jLAFddr4ZJZ_pqZx8-G4RfQxrRZl84w9byYw",
+      "menor_preco": 265.99,
+      "fonte": "Loja Topper",
+      "link": "https://www.topper.com.br/p/chuteira-futsal-topper-dominator-fuse-ii-unissex-rosa+preto-D30-7314-794",
+      "descricao": "Chuteira de futsal Topper Dominator Fuse 2",
+      "ranking": "1º em 2025"
+    },
+    {
+      "nome": "Adidas Top Sala Competition 2",
+      "categoria": "Custo beneficio",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRSkvQqV7MJpZxbpxcAbBwIDq-ONoC_92xyX9JdISyjfObsgvQRk68PO9ms7m0YtFxBagc_21iOZWwKSwgMmd3r9Lkc3NnOsqvJj3na9FFiz3IscJ7DoujvNURn",
+      "menor_preco": 370.49,
+      "fonte": "Centauro",
+      "link": "https://www.centauro.com.br/chuteira-futsal-adulto-adidas-top-sala-competition-ii-993544.html?cor=3W",
+      "descricao": "Chuteira de futsal Adidas Top Sala Competition 2",
+      "ranking": "1º em 2025"
     }
   ]
 }
