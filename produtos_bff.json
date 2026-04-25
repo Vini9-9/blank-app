@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "nome": "Smartphone XYZ Pro",
+      "categoria": "Eletrônicos",
+      "imagem": "https://placehold.co/400x300/1976d2/white?text=Smartphone",
+      "menor_preco": 1299.90,
+      "fonte": "TechStore",
+      "link": "https://www.amazon.com.br/dp/exemplo1",
+      "descricao": "Smartphone com 128GB, 6GB RAM e câmera de 50MP"
+    },
+    {
+      "nome": "Fone de Ouvido Bluetooth",
+      "categoria": "Eletrônicos",
+      "imagem": "https://placehold.co/400x300/42a5f5/white?text=Fone",
+      "menor_preco": 199.90,
+      "fonte": "SoundShop",
+      "link": "https://www.mercadolivre.com.br/exemplo2",
+      "descricao": "Cancelamento de ruído e 20h de bateria"
+    },
+    {
+      "nome": "Camiseta Básica",
+      "categoria": "Moda",
+      "imagem": "https://placehold.co/400x300/66bb6a/white?text=Camiseta",
+      "menor_preco": 49.90,
+      "fonte": "ModaStyle",
+      "link": "https://www.lojasrenner.com.br/exemplo3",
+      "descricao": "Camiseta 100% algodão, cores diversas"
+    },
+    {
+      "nome": "Livro: Python Avançado",
+      "categoria": "Livros",
+      "imagem": "https://placehold.co/400x300/ff9800/white?text=Livro",
+      "menor_preco": 89.90,
+      "fonte": "BookStore",
+      "link": "https://www.amazon.com.br/dp/exemplo4",
+      "descricao": "Guia completo de Python para desenvolvedores"
+    }
+  ]
+}
