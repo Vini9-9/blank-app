@@ -152,7 +152,7 @@ def exibir_produto(produto: Dict):
                 st.caption(produto.get('descricao'))
 
             if produto.get('ranking'):
-                st.caption('Ranking: ' + produto.get('ranking'))
+                st.caption('Melhor posição ma categoria: ' + produto.get('ranking'))
             
             # Fonte e Link
             fonte = produto.get('fonte', 'Fonte não informada')
