@@ -169,27 +169,62 @@ def exibir_produto(produto: Dict):
             link = produto.get('link', '#')
             cupom = produto.get('cupom', None)  # Pega o cupom se existir
 
-            st.markdown(f'<div class="product-source">🏪 {fonte}</div>', unsafe_allow_html=True)
-
             # Exibir cupom se existir
+            # if cupom:
+            #     # Criar um ID único para cada cupom
+            #     cupom_id = f"cupom_{hash(produto.get('nome', ''))}_{hash(cupom)}"
+                
+            #     # Container para o cupom
+            #     st.markdown(f'<div class="coupon-container" id="{cupom_id}_container">', unsafe_allow_html=True)
+                
+            #     col_cupom, col_botao = st.columns([1, 1])
+            #     with col_cupom:
+            #         st.code(cupom, language="txt")
+            #         copy_button(
+            #             cupom,
+            #             icon='material_symbols',  # default, use 'st' as alternative
+            #             tooltip='Any tooltip text',  # defaults to 'Copy'
+            #             copied_label='Cupom copiado',  # defaults to 'Copied!'
+            #             key=cupom_id,  # If omitted, a random key will be generated
+            #         )
+                
+                
+            #     st.markdown('</div>', unsafe_allow_html=True)
             if cupom:
-                # Criar um ID único para cada cupom
-                cupom_id = f"cupom_{hash(produto.get('nome', ''))}_{hash(cupom)}"
                 
-                # Container para o cupom
-                st.markdown(f'<div class="coupon-container" id="{cupom_id}_container">', unsafe_allow_html=True)
-                
-                col_cupom, col_botao = st.columns([1, 1])
-                with col_cupom:
+                # Container estilizado para o cupom
+                with st.container():
+                    # st.markdown("#### 🎫 Cupom de desconto")
+                                    # Exibir cupom em destaque
+                    st.markdown(f"""
+                    <div style="
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        border-radius: 8px;
+                        padding: 12px;
+                        text-align: center;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    ">
+                        <span style="
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            letter-spacing: 3px;
+                            font-family: monospace;
+                        ">Cupom de desconto</span>
+                    </div>
+                    """, unsafe_allow_html=True)
                     st.code(cupom, language="txt")
                 
                 
                 st.markdown('</div>', unsafe_allow_html=True)
-
+                    
             # Botão/link para oferta
             if link and link != '#':
+                st.markdown(f'<div class="product-source">🏪 {fonte}</div>', unsafe_allow_html=True)
                 # Se tiver cupom, adiciona texto explicativo
                 texto_botao = "🔗 Ver oferta →"
+                if cupom:
+                    texto_botao = "👀 Link exclusivo para o cupom →"
                 
                 st.markdown(f'<a href="{link}" target="_blank"><button style="background:#1976d2; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer; margin-top:10px; width:100%;">{texto_botao}</button></a>', unsafe_allow_html=True)
             else:
