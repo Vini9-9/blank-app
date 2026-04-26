@@ -3,6 +3,7 @@ import os
 import streamlit as st
 from typing import List, Dict, Optional
 from st_clipboard import copy_to_clipboard
+from random import randint
 
 # Configuração da página
 st.set_page_config(
@@ -176,7 +177,8 @@ def exibir_produto(produto: Dict):
         
         with col2:
             # Nome do produto
-            st.markdown(f"### {produto.get('nome', 'Produto sem nome')}")
+            nome_produto = produto.get('nome', 'Produto sem nome')
+            st.markdown(f"### {nome_produto}")
             
             # Menor preço encontrado
             preco = produto.get('menor_preco', 0)
@@ -243,7 +245,7 @@ def exibir_produto(produto: Dict):
                 
                 # Montar texto de compartilhamento
                 texto_share = montar_texto_compartilhamento(produto)
-                share_id = f"share_{hash(produto.get('nome', ''))}"
+                share_id = f"share_{hash(nome_produto)*randint(0,100)}"
                 
                 if st.button("📋 Copiar oferta", key=share_id, use_container_width=True):
                     copy_to_clipboard(texto_share)
