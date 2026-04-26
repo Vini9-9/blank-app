@@ -2,6 +2,7 @@ import json
 import os
 import streamlit as st
 from typing import List, Dict, Optional
+from st_copy import copy_button
 
 # Configuração da página
 st.set_page_config(
@@ -166,12 +167,31 @@ def exibir_produto(produto: Dict):
             # Fonte e Link
             fonte = produto.get('fonte', 'Fonte não informada')
             link = produto.get('link', '#')
-            
+            cupom = produto.get('cupom', None)  # Pega o cupom se existir
+
             st.markdown(f'<div class="product-source">🏪 {fonte}</div>', unsafe_allow_html=True)
-            
+
+            # Exibir cupom se existir
+            if cupom:
+                # Criar um ID único para cada cupom
+                cupom_id = f"cupom_{hash(produto.get('nome', ''))}_{hash(cupom)}"
+                
+                # Container para o cupom
+                st.markdown(f'<div class="coupon-container" id="{cupom_id}_container">', unsafe_allow_html=True)
+                
+                col_cupom, col_botao = st.columns([1, 1])
+                with col_cupom:
+                    st.code(cupom, language="txt")
+                
+                
+                st.markdown('</div>', unsafe_allow_html=True)
+
             # Botão/link para oferta
             if link and link != '#':
-                st.markdown(f'<a href="{link}" target="_blank"><button style="background:#1976d2; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer; margin-top:10px;">🔗 Ver oferta →</button></a>', unsafe_allow_html=True)
+                # Se tiver cupom, adiciona texto explicativo
+                texto_botao = "🔗 Ver oferta →"
+                
+                st.markdown(f'<a href="{link}" target="_blank"><button style="background:#1976d2; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer; margin-top:10px; width:100%;">{texto_botao}</button></a>', unsafe_allow_html=True)
             else:
                 st.markdown('<div class="product-source">🔗 Link indisponível</div>', unsafe_allow_html=True)
         

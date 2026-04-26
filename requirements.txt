@@ -1,1 +1,2 @@
 streamlit
+st-copy>=1.1.2
