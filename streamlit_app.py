@@ -2,7 +2,7 @@ import json
 import os
 import streamlit as st
 from typing import List, Dict, Optional
-from st_copy import copy_button
+from st_clipboard import copy_to_clipboard
 
 # Configuração da página
 st.set_page_config(
@@ -115,6 +115,43 @@ def organizar_por_categoria(produtos: List[Dict]) -> Dict[str, List[Dict]]:
     
     return categorias
 
+def montar_texto_compartilhamento(produto: Dict) -> str:
+    """
+    Monta o texto para compartilhamento da oferta
+    
+    Args:
+        produto: Dicionário com dados do produto
+    
+    Returns:
+        Texto formatado para compartilhamento
+    """
+    nome = produto.get('nome', 'Produto')
+    preco = produto.get('menor_preco', 0)
+    fonte = produto.get('fonte', '')
+    link = produto.get('link', '')
+    cupom = produto.get('cupom', None)
+    descricao = produto.get('descricao', '')
+    
+    texto = f"🛍️ {nome}\n"
+    
+    if descricao:
+        texto += f"\n{descricao}\n"
+    
+    if preco:
+        preco_formatado = f"R$ {preco:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+        texto += f"\n💰 Preço: {preco_formatado}"
+    
+    if fonte:
+        texto += f"\n🏪 Loja: {fonte}"
+    
+    if cupom:
+        texto += f"\n🎫 Com esse cupom fica ainda mais barato: {cupom}"
+    
+    if link:
+        texto += f"\n🔗 {link}"
+    
+    return texto
+
 def exibir_produto(produto: Dict):
     """
     Exibe um único produto no formato de card
@@ -168,34 +205,10 @@ def exibir_produto(produto: Dict):
             fonte = produto.get('fonte', 'Fonte não informada')
             link = produto.get('link', '#')
             cupom = produto.get('cupom', None)  # Pega o cupom se existir
-
-            # Exibir cupom se existir
-            # if cupom:
-            #     # Criar um ID único para cada cupom
-            #     cupom_id = f"cupom_{hash(produto.get('nome', ''))}_{hash(cupom)}"
-                
-            #     # Container para o cupom
-            #     st.markdown(f'<div class="coupon-container" id="{cupom_id}_container">', unsafe_allow_html=True)
-                
-            #     col_cupom, col_botao = st.columns([1, 1])
-            #     with col_cupom:
-            #         st.code(cupom, language="txt")
-            #         copy_button(
-            #             cupom,
-            #             icon='material_symbols',  # default, use 'st' as alternative
-            #             tooltip='Any tooltip text',  # defaults to 'Copy'
-            #             copied_label='Cupom copiado',  # defaults to 'Copied!'
-            #             key=cupom_id,  # If omitted, a random key will be generated
-            #         )
-                
-                
-            #     st.markdown('</div>', unsafe_allow_html=True)
             if cupom:
                 
                 # Container estilizado para o cupom
                 with st.container():
-                    # st.markdown("#### 🎫 Cupom de desconto")
-                                    # Exibir cupom em destaque
                     st.markdown(f"""
                     <div style="
                         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -227,6 +240,14 @@ def exibir_produto(produto: Dict):
                     texto_botao = "👀 Link exclusivo para o cupom →"
                 
                 st.markdown(f'<a href="{link}" target="_blank"><button style="background:#1976d2; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer; margin-top:10px; width:100%;">{texto_botao}</button></a>', unsafe_allow_html=True)
+                
+                # Montar texto de compartilhamento
+                texto_share = montar_texto_compartilhamento(produto)
+                share_id = f"share_{hash(produto.get('nome', ''))}"
+                
+                if st.button("📋 Copiar oferta", key=share_id, use_container_width=True):
+                    copy_to_clipboard(texto_share)
+                    st.success("✅ Oferta copiada para área de transferência!")
             else:
                 st.markdown('<div class="product-source">🔗 Link indisponível</div>', unsafe_allow_html=True)
         
