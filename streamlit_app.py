@@ -143,13 +143,22 @@ def exibir_produto(produto: Dict):
             # Menor preço encontrado
             preco = produto.get('menor_preco', 0)
             if preco:
-                st.markdown(f'<div class="product-price">💰 R$ {preco:.2f}</div>', unsafe_allow_html=True)
+                preco_formatado = f"R$ {preco:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+                st.markdown(
+                    f'''
+                    <div class="product-price">
+                        <div style="font-size: 12px; color: #777;">A partir de:</div>
+                        <div style="font-size: 18px; font-weight: bold;">💰 {preco_formatado}</div>
+                    </div>
+                    ''',
+                    unsafe_allow_html=True
+                )
             else:
                 st.markdown('<div class="product-price">💰 Preço não informado</div>', unsafe_allow_html=True)
             
             # Descrição (se tiver)
-            if produto.get('descricao'):
-                st.caption(produto.get('descricao'))
+            # if produto.get('descricao'):
+            #     st.caption(produto.get('descricao'))
 
             if produto.get('ranking'):
                 st.caption('Melhor posição na categoria: ' + produto.get('ranking'))
@@ -207,7 +216,7 @@ def main():
     # Exibir produtos por categoria
     for categoria, lista_produtos in categorias.items():
         # Cabeçalho da categoria
-        st.markdown(f'<div class="category-header"><h2>📂 {categoria}</h2><p>{len(lista_produtos)} produto(s)</p></div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="category-header"><h2> {categoria}</h2><p>{len(lista_produtos)} produto(s)</p></div>', unsafe_allow_html=True)
         
         # Exibir produtos em grid (2 colunas)
         cols = st.columns(2)
