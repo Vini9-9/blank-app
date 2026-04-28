@@ -4,6 +4,7 @@ import streamlit as st
 from typing import List, Dict, Optional
 from st_clipboard import copy_to_clipboard
 from random import randint
+import requests
 
 # Configuração da página
 st.set_page_config(
@@ -55,46 +56,77 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-def carregar_produtos(arquivo: str = "produtos_bff.json") -> Optional[List[Dict]]:
+@st.cache_data(ttl=6000)
+def carregar_produtos_api() -> List[Dict]:
     """
-    Carrega os produtos do arquivo JSON
-    
-    Args:
-        arquivo: Nome do arquivo JSON
-    
-    Returns:
-        Lista de produtos ou None se erro
+    Busca produtos na API e os mantém em cache em memória.
+    """
+    response = requests.get(
+        "http://9vini9.pythonanywhere.com/api/produtos?ordenar_por=nome",
+        timeout=10
+    )
+    response.raise_for_status()
+    data = response.json()
+    produtos = data.get('produtos', [])
+    if not isinstance(produtos, list):
+        raise ValueError("Formato inválido da resposta da API.")
+    return produtos
+
+
+def salvar_backup_json(produtos: List[Dict], arquivo: str = "produtos_bff.json"):
+    """
+    Salva um backup local em JSON para uso quando a API estiver indisponível.
+    """
+    try:
+        with open(arquivo, "w", encoding="utf-8") as f:
+            json.dump({"produtos": produtos}, f, ensure_ascii=False, indent=4)
+    except Exception as e:
+        st.warning(f"Não foi possível salvar backup local: {str(e)}")
+
+
+def carregar_produtos_backup(arquivo: str = "produtos_bff.json") -> Optional[List[Dict]]:
+    """
+    Carrega os produtos do backup JSON local.
     """
     try:
         if not os.path.exists(arquivo):
-            st.error(f"❌ Arquivo '{arquivo}' não encontrado!")
             return None
         
         with open(arquivo, 'r', encoding='utf-8') as f:
             dados = json.load(f)
         
         if not dados:
-            st.warning("⚠️ O arquivo JSON está vazio!")
             return None
         
-        # Se for um dicionário com chave 'produtos'
         if isinstance(dados, dict) and 'produtos' in dados:
-            produtos = dados['produtos']
-        # Se for diretamente uma lista
+            return dados['produtos']
         elif isinstance(dados, list):
-            produtos = dados
-        else:
-            st.error("❌ Formato do JSON inválido! Esperado lista ou objeto com chave 'produtos'")
-            return None
-        
-        return produtos
-    
+            return dados
+        return None
     except json.JSONDecodeError:
-        st.error("❌ Erro ao ler o JSON: arquivo mal formatado!")
         return None
+    except Exception:
+        return None
+
+
+def carregar_produtos() -> Optional[List[Dict]]:
+    """
+    Tenta carregar os produtos da API em cache. Usa o JSON local apenas como backup.
+    """
+    try:
+        produtos = carregar_produtos_api()
+        if produtos:
+            salvar_backup_json(produtos)
+            return produtos
     except Exception as e:
-        st.error(f"❌ Erro inesperado: {str(e)}")
-        return None
+        st.warning(f"Falha ao carregar dados da API: {str(e)}")
+
+    produtos_fallback = carregar_produtos_backup()
+    if produtos_fallback:
+        st.info("Usando backup local devido a problemas na API.")
+        return produtos_fallback
+
+    return None
 
 def organizar_por_categoria(produtos: List[Dict]) -> Dict[str, List[Dict]]:
     """
@@ -259,15 +291,65 @@ def main():
     """
     Função principal da aplicação
     """
-    # Título principal
+    if 'api_key' not in st.session_state:
+        st.session_state.api_key = ""
+    if 'refresh_requested' not in st.session_state:
+        st.session_state.refresh_requested = False
+
+    # Título principal com botão de refresh ao lado
     st.title("🛍️ Catálogo de Produtos")
+    # col1, col2 = st.columns([2, 1])
+    # with col1:
+        # st.title("🛍️ Catálogo de Produtos")
+    # with col2:
+        # if st.button("🔄"):
+            # st.session_state.refresh_requested = True
+            # st.experimental_rerun()
+
+    if st.session_state.refresh_requested:
+        st.markdown("---")
+        st.subheader("Atualizar catálogo no site")
+        api_key = st.text_input("Digite sua API Key", type="password", key="api_key_input")
+        if st.button("Enviar", key="submit_api_key"):
+            if api_key.strip():
+                st.session_state.api_key = api_key.strip()
+                try:
+                    response = requests.post(
+                        "http://9vini9.pythonanywhere.com/api/atualizar-catalogo",
+                        headers={"Authorization": f"Bearer {st.session_state.api_key}"}
+                    )
+                    if response.status_code == 200:
+                        st.success("Catálogo atualizado no site com sucesso!")
+                        st.session_state.refresh_requested = False
+                        # Após atualizar no site, recarregar os dados
+                        try:
+                            get_response = requests.get("http://9vini9.pythonanywhere.com/api/produtos?ordenar_por=nome")
+                            if get_response.status_code == 200:
+                                data = get_response.json()
+                                produtos = data.get("produtos", [])
+                                with open("produtos_bff.json", "w", encoding="utf-8") as f:
+                                    json.dump({"produtos": produtos}, f, ensure_ascii=False, indent=4)
+                                carregar_produtos_api.clear()
+                                st.success("Dados locais atualizados!")
+                            else:
+                                st.warning("Catálogo atualizado no site, mas falha ao recarregar dados locais.")
+                        except Exception as e:
+                            st.warning(f"Catálogo atualizado no site, mas erro ao recarregar dados: {str(e)}")
+                        st.experimental_rerun()
+                    else:
+                        st.error(f"Erro na API: {response.status_code} - {response.text}")
+                except Exception as e:
+                    st.error(f"Erro ao conectar: {str(e)}")
+            else:
+                st.error("Por favor, digite uma API Key válida.")
+
     st.markdown("---")
     
-    # Carregar produtos
+    # Carregar produtos da API em cache, usando o JSON apenas como backup
     produtos = carregar_produtos()
     
     if not produtos:
-        st.info("💡 Dica: Certifique-se de que o arquivo 'produtos_bff.json' existe e está no formato correto.")
+        st.info("💡 Dica: verifique se 'produtos_bff.json' existe e está no formato correto. Use o botão Refresh para atualizar o catálogo no site.")
         
         # Exemplo de estrutura esperada
         with st.expander("📖 Ver exemplo de estrutura do JSON"):

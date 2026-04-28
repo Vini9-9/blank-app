@@ -1,3 +1,4 @@
 streamlit
 st-copy>=1.1.2
 st-clipboard
+requests
